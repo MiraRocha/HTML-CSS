@@ -57,7 +57,7 @@ section.imagem {
     color: white;
 }
 
-section.imagem > p > pre {
+section.imagem > pre > p {
     width: 400px;
     background-color: rgba(0, 0, 0, 0.253);
 }
