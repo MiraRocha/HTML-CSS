@@ -12,15 +12,34 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #808080;
             color: white;
+
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -2px;
+            background-color: #808080;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
 
         }
 
@@ -34,6 +53,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+           CAPTION 
            HEAD
                TR, TD, TH
            TBODY
@@ -43,122 +63,124 @@
     -->
 </body>
 <table>
+    <caption>População das Unidades Federativas</caption>
+    </caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
 
     </thead>
     <tbody>
         <tr>
             <td>São Paulo</td>
-            <td>45.919.049</td>
+            <td class="num">45.919.049</td>
         </tr>
         <tr>
             <td>Minas Gerais</td>
-            <td>21.168.791</td>
+            <td class="num">21.168.791</td>
         </tr>
         <tr>
             <td>Rio de Janeiro</td>
-            <td>17.264.943</td>
+            <td class="num">17.264.943</td>
         </tr>
         <tr>
             <td>Bahia</td>
-            <td>14.873.064</td>
+            <td class="num">14.873.064</td>
         </tr>
         <tr>
             <td>Paraná</td>
-            <td>11.433.957</td>
+            <td class="num">11.433.957</td>
 
         </tr>
         <tr>
             <td>Rio Grande do Sul</td>
-            <td>11.377.239</td>
+            <td class="num">11.377.239</td>
         </tr>
         <tr>
             <td>Penambuco</td>
-            <td>9.557.071</td>
+            <td class="num">9.557.071</td>
         </tr>
         <tr>
             <td>Ceará</td>
-            <td>9.192.078</td>
+            <td class="num">9.192.078</td>
         </tr>
         <tr>
             <td>Pará</td>
-            <td>8.602.885</td>
+            <td class="num">8.602.885</td>
         </tr>
         <tr>
             <td>Santa Catarina</td>
-            <td>7.164.788</td>
+            <td class="num">7.164.788</td>
         </tr>
         <tr>
             <td>Maranhão</td>
-            <td>7.075.181</td>
+            <td class="num">7.075.181</td>
         </tr>
         <tr>
             <td>Goías</td>
-            <td>7.018.354</td>
+            <td class="num">7.018.354</td>
         </tr>
         <tr>
             <td>Amazonas</td>
-            <td>4.144.597</td>
+            <td class="num">4.144.597</td>
         </tr>
         <tr>
             <td>Espirito Santo</td>
-            <td>4.018.127</td>
+            <td class="num">4.018.127</td>
         </tr>
         <tr>
             <td>Paraba</td>
-            <td>4.018.127</td>
+            <td class="num">4.018.127</td>
         </tr>
         <tr>
             <td>Rio Grande do Norte</td>
-            <td>3.506.853</td>
+            <td class="num">3.506.853</td>
         </tr>
         <tr>
             <td>Mato Grosso</td>
-            <td>3.484.466</td>
+            <td class="num">3.484.466</td>
         </tr>
         <tr>
             <td>Alagoas</td>
-            <td>3.337.357</td>
+            <td class="num">3.337.357</td>
         </tr>
         <tr>
             <td>Piauí</td>
-            <td>3.281.480</td>
+            <td class="num">3.281.480</td>
         </tr>
         <tr>
             <td>Distrito Federal</td>
-            <td>3.015.268</td>
+            <td class="num">3.015.268</td>
         </tr>
         <tr>
             <td>Mato Grosso do Sul</td>
-            <td>2.778.986</td>
+            <td class="num">2.778.986</td>
         </tr>
         <tr>
             <td>Sergipe</td>
-            <td>2.318.822</td>
+            <td class="num">2.318.822</td>
         </tr>
         <tr>
             <td>Rondônia</td>
-            <td>1.796.460</td>
+            <td class="num">1.796.460</td>
         </tr>
         <tr>
             <td>Tocantins</td>
-            <td>1.590.248</td>
+            <td class="num">1.590.248</td>
         </tr>
         <tr>
             <td>Acre</td>
-            <td>8.944.70</td>
+            <td class="num">8.944.70</td>
         </tr>
         <tr>
             <td>Amapá</td>
-            <td>8.617.73</td>
+            <td class="num">8.617.73</td>
         </tr>
         <tr>
             <td>Roraima</td>
-            <td>6.527.13</td>
+            <td class="num">6.527.13</td>
         </tr>
 
 
@@ -166,7 +188,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td><strong>210.147.125</strong></td>
         </tr>
 
